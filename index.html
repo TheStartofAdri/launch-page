@@ -12,17 +12,25 @@
       background: linear-gradient(to bottom right, #000000, #000000);
       color: #ffffff;
       text-align: center;
+      padding: 0;
+    }
+
+   .content {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      padding: 20px;
+      min-height: 80vh;
+      padding: 40px 20px;
     }
 
+
+
     img.logo {
-      max-width: 400px;
+      max-width: 350px;
       height: auto;
+      margin: 20px auto 25px auto;
+      padding-top: 40px;
       margin-bottom: 25px;
       filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 1));
       background: transparent;
@@ -75,6 +83,7 @@
 
   <!-- LOGO -->
   <img src="logo.png" alt="BioDom Logo" class="logo" />
+  <div id="content"> 
 
   <!-- TITLE -->
   <h1>Скоро Начинаем!</h1>
@@ -85,6 +94,7 @@
     <div class="time-block"><span id="hours">0</span><span class="label">Часов</span></div>
     <div class="time-block"><span id="minutes">0</span><span class="label">Минут</span></div>
     <div class="time-block"><span id="seconds">0</span><span class="label">Секунд</span></div>
+  </div>
   </div>
 
 
