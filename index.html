@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coming Soon – FreshHarvest</title>
+  <title>BioDom – Скоро Начинаем!</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
@@ -15,7 +15,18 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       height: 100vh;
+      padding: 20px;
+    }
+
+    img.logo {
+      max-width: 500px;
+      height: auto;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 1));
+      background: transparent;
+      display: block;
     }
 
     h1 {
@@ -35,6 +46,7 @@
       display: flex;
       justify-content: center;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .time-block {
@@ -61,16 +73,19 @@
 </head>
 <body>
 
-  <h1>DioDom скоро появится</h1>
-  <p>Мы готовим ваши любимые органические продукты!</p>
+  <!-- LOGO -->
+  <img src="logo.png" alt="BioDom Logo" class="logo" />
 
+  <!-- TITLE -->
+  <h1>Скоро Начинаем!</h1>
+
+  <!-- COUNTDOWN -->
   <div id="countdown">
     <div class="time-block"><span id="days">0</span><span class="label">Дней</span></div>
     <div class="time-block"><span id="hours">0</span><span class="label">Часов</span></div>
     <div class="time-block"><span id="minutes">0</span><span class="label">Минут</span></div>
     <div class="time-block"><span id="seconds">0</span><span class="label">Секунд</span></div>
   </div>
-
 
 
   <script>
@@ -85,7 +100,7 @@
       const timeLeft = endDate - now;
 
       if (timeLeft <= 0) {
-        document.getElementById("countdown").innerHTML = "We're Live!";
+        document.getElementById("countdown").innerHTML = "Мы уже открылись!";
         return;
       }
 
